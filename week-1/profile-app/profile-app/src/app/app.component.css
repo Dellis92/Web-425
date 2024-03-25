@@ -1,0 +1,41 @@
+*{
+  text-decoration: none;
+}
+.navbar{
+  background: white;
+  font-family: sans-serif;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.navdiv{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.li{
+  list-style: none;
+  display: inline-block;
+}
+
+.li a{
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 25px;
+}
+
+.left{
+  background-color: black;
+  width: 50%;
+  float: left;
+  font: white;
+}
+
+.right{
+  background-color: grey;
+  width: 50%;
+  float: right;
+  font: white;
+}
