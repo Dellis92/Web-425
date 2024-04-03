@@ -9,5 +9,7 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  myWorld = 'You are now in DeVonte World';
+  isLoggedIn: Boolean = true
+
+    assignment: string = "Exercise 2.3 - Data Binding";
 }
