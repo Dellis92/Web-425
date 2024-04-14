@@ -4,6 +4,7 @@ import { Composer } from '../composer.class';
 import { FormControl } from '@angular/forms';
 import { debounceTime } from 'rxjs/operators';
 import { ComposerService } from '../composer.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-composer-list',
@@ -14,21 +15,14 @@ import { ComposerService } from '../composer.service';
 })
 export class ComposerListComponent implements OnInit {
 
-  composers: Array<IComposer>;
-  txtSearchControl = new FormControl('');
+  composers: Observable<IComposer[]>;
 
   constructor(private composerService: ComposerService) {
-    this.composers = new Composer().getComposers();
-
-    this.textSearchControl.valueChanges.pipe(debounceTime(500)).subscribe(val => this.filterComposers(val));
+    this.composers = this.composers = this.composerService.ServicefilterComposers(name);
   }
 
   }
 
   ngOnInit(): void {
 
-}
-
-filterComposers(name: string) {
-  alert(name);
 }
