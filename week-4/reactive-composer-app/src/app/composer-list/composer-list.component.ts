@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { IComposer } from '../composer.interface';
-import { ComposerService } from './composer.service';
+import { Composer } from '../composer.class';
+import { FormControl } from '@angular/forms';
+import { debounceTime } from 'rxjs/operators';
+import { ComposerService } from '../composer.service';
 
 @Component({
   selector: 'app-composer-list',
@@ -14,7 +17,7 @@ export class ComposerListComponent implements OnInit {
   composers: Array<IComposer>;
 
   constructor(private composerService: ComposerService) {
-    this.composers = this.composerService.getComposers();
+    this.composers = new Composer().getComposers();
   }
 
   }
