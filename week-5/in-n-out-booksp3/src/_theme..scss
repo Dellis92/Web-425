@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+//define pallete
+$dark-primary: mat-pallete($mat-blue);
+$dark-accent: mat-pallete($mat-green, 400)
+
+//the warn pallete
+$dark-warn: mat-pallete($mat-red, 400);
+
+//theme object
+$dark-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
+
+//theme styles or core
+@include angular-material-theme($dark-theme);
